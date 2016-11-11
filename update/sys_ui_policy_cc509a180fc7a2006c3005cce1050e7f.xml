@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_ui_policy">
+    <sys_ui_policy action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <conditions table="x_wec_ibm_transfer_cust_data">u_ibm_flag=Completed^ORu_ibm_flag=Not Required^ORu_ibm_flag=Approved/Ready to Send^ORu_ibm_flag=Sent to IBM^EQ<item endquery="false" field="u_ibm_flag" goto="false" newquery="false" operator="=" or="false" value="Completed"/>
+            <item endquery="false" field="u_ibm_flag" goto="false" newquery="false" operator="=" or="true" value="Not Required"/>
+            <item endquery="false" field="u_ibm_flag" goto="false" newquery="false" operator="=" or="true" value="Approved/Ready to Send"/>
+            <item endquery="false" field="u_ibm_flag" goto="false" newquery="false" operator="=" or="true" value="Sent to IBM"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </conditions>
+        <description/>
+        <global>true</global>
+        <inherit>false</inherit>
+        <model_id/>
+        <model_table/>
+        <on_load>true</on_load>
+        <order>400</order>
+        <reverse_if_false>true</reverse_if_false>
+        <run_scripts>true</run_scripts>
+        <script_false><![CDATA[function onCondition() {
+	g_form.setValue('u_comp_oprid','');
+	g_form.setValue('u_comp_dttm','');
+	g_form.setValue('u_apr_oprid','');
+	g_form.setValue('u_apr_dttm','');
+	g_form.setValue('u_sent_by','');
+	g_form.setValue('u_sent_dttm','');
+	
+	var hasRole = g_user.hasRoleExactly('x_wec_ibm_transfer.O2C Data Approver');
+	var fields = g_form.getEditableFields();
+	var x;
+	
+	if (!hasRole) {
+		for (x = 0; x < fields.length; x++) {
+			g_form.setReadOnly(fields[x], false);
+		}
+	} else {
+		for (x = 0; x < fields.length; x++) {
+			g_form.setReadOnly(fields[x], true);
+		}
+	}
+}]]></script_false>
+        <script_true><![CDATA[function onCondition() {
+	var hasApproverRole = g_user.hasRoleExactly('x_wec_ibm_transfer.O2C Data Approver');
+	var hasEntryRole = g_user.hasRoleExactly('x_wec_ibm_transfer.O2C Data Entry');
+	var fields = g_form.getEditableFields();
+	var x;
+	
+	if (!hasApproverRole) {
+		for (x = 0; x < fields.length; x++) {
+			if (fields[x] == 'u_ibm_flag') {
+				g_form.setReadOnly(fields[x], false);
+			} else {
+				g_form.setReadOnly(fields[x], true);
+			}
+		}
+	} else {
+		for (x = 0; x < fields.length; x++) {
+			if (fields[x] == 'u_ibm_flag' || fields[x] == 'u_descr254'){
+				g_form.setReadOnly(fields[x], false);
+			} else {
+				g_form.setReadOnly(fields[x], true);
+			}
+		}
+	}
+}
+
+]]></script_true>
+        <set_values/>
+        <short_description>Enable fields for entry</short_description>
+        <sys_class_name>sys_ui_policy</sys_class_name>
+        <sys_created_by>peter.crivello@weather.com</sys_created_by>
+        <sys_created_on>2016-11-08 18:10:18</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_id>cc509a180fc7a2006c3005cce1050e7f</sys_id>
+        <sys_mod_count>18</sys_mod_count>
+        <sys_name>Enable fields for entry</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="IBM Transfer of Business" source="x_wec_ibm_transfer">413f9fe20f7e220034457d4ce1050ec4</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="IBM Transfer of Business">413f9fe20f7e220034457d4ce1050ec4</sys_scope>
+        <sys_update_name>sys_ui_policy_cc509a180fc7a2006c3005cce1050e7f</sys_update_name>
+        <sys_updated_by>peter.crivello@weather.com</sys_updated_by>
+        <sys_updated_on>2016-11-09 16:04:38</sys_updated_on>
+        <table>x_wec_ibm_transfer_cust_data</table>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_ui_policy>
+</record_update>

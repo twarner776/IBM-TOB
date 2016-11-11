@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>u_ibm_flag</field>
+        <global>true</global>
+        <messages/>
+        <name>Validate IBM flag value</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+		var hasApproverRole = g_user.hasRoleExactly('x_wec_ibm_transfer.O2C Data Approver');
+	var hasEntryRole = g_user.hasRoleExactly('x_wec_ibm_transfer.O2C Data Entry');
+	
+	if (isLoading || newValue === '') {
+		return;
+	}
+	
+	switch (newValue){
+		case 'Completed':
+		if (!hasEntryRole){
+			g_form.setValue('u_ibm_flag',oldValue);
+			g_form.setReadOnly('u_ibm_flag', false);
+			g_form.addErrorMessage('You cannot change the IBM Flag to ' + newValue + ', you are an approver and not a data entry user.');
+		}
+		break;
+		case 'Approved/Ready to Send':
+		case 'Not Required':
+		if (!hasApproverRole){
+			g_form.setValue('u_ibm_flag',oldValue);
+			g_form.setReadOnly('u_ibm_flag', false);
+			g_form.addErrorMessage('You cannot change the IBM Flag to ' + newValue + ', you are a data entry user and not an approver.');
+		}
+		break;
+		case 'Sent to IBM':
+		g_form.setValue('u_ibm_flag',oldValue);
+			g_form.setReadOnly('u_ibm_flag', false);
+			g_form.addErrorMessage('You cannot change the IBM Flag to ' + newValue + ', this is done by the extraction process to create the IBM customer file.');
+		break;
+	}
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>peter.crivello@weather.com</sys_created_by>
+        <sys_created_on>2016-11-08 20:45:26</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_id>3d43329c0f0ba2006c3005cce1050e4b</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>Validate IBM flag value</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="IBM Transfer of Business" source="x_wec_ibm_transfer">413f9fe20f7e220034457d4ce1050ec4</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="IBM Transfer of Business">413f9fe20f7e220034457d4ce1050ec4</sys_scope>
+        <sys_update_name>sys_script_client_3d43329c0f0ba2006c3005cce1050e4b</sys_update_name>
+        <sys_updated_by>peter.crivello@weather.com</sys_updated_by>
+        <sys_updated_on>2016-11-09 18:25:57</sys_updated_on>
+        <table>x_wec_ibm_transfer_cust_data</table>
+        <type>onChange</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

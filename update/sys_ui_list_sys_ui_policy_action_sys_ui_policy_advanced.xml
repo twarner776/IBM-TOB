@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_ui_list parent="sys_ui_policy" relationship="" sys_domain="global" table="sys_ui_policy_action" version="2" view="advanced">
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>field</element>
+            <list_id display_value="sys_ui_policy_action" element="NULL" name="sys_ui_policy_action" parent="sys_ui_policy" relationship="NULL" sys_domain="global" view="7966be310a0a0b8c00bd504090503227">73a79b71d7422100f2d224837e6103ea</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>0</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2014-07-22 13:24:13</sys_created_on>
+            <sys_id>b3a79b71d7422100f2d224837e6103ea</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2014-07-22 13:24:13</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>mandatory</element>
+            <list_id display_value="sys_ui_policy_action" element="NULL" name="sys_ui_policy_action" parent="sys_ui_policy" relationship="NULL" sys_domain="global" view="7966be310a0a0b8c00bd504090503227">73a79b71d7422100f2d224837e6103ea</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>1</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2014-07-22 13:24:13</sys_created_on>
+            <sys_id>f3a79b71d7422100f2d224837e6103ea</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2014-07-22 13:24:13</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>visible</element>
+            <list_id display_value="sys_ui_policy_action" element="NULL" name="sys_ui_policy_action" parent="sys_ui_policy" relationship="NULL" sys_domain="global" view="7966be310a0a0b8c00bd504090503227">73a79b71d7422100f2d224837e6103ea</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>2</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2014-07-22 13:24:13</sys_created_on>
+            <sys_id>37a79b71d7422100f2d224837e6103ea</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2014-07-22 13:24:13</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>disabled</element>
+            <list_id display_value="sys_ui_policy_action" element="NULL" name="sys_ui_policy_action" parent="sys_ui_policy" relationship="NULL" sys_domain="global" view="7966be310a0a0b8c00bd504090503227">73a79b71d7422100f2d224837e6103ea</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>3</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2014-07-22 13:24:13</sys_created_on>
+            <sys_id>77a79b71d7422100f2d224837e6103ea</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2014-07-22 13:24:13</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element/>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <name>sys_ui_policy_action</name>
+            <parent>sys_ui_policy</parent>
+            <position/>
+            <relationship/>
+            <sum>false</sum>
+            <sys_class_name>sys_ui_list</sys_class_name>
+            <sys_created_by>peter.crivello@weather.com</sys_created_by>
+            <sys_created_on>2016-11-08 18:27:06</sys_created_on>
+            <sys_customer_update>true</sys_customer_update>
+            <sys_domain>global</sys_domain>
+            <sys_id>3a749a980fc7a2006c3005cce1050e8c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>sys_ui_policy_action</sys_name>
+            <sys_package display_value="IBM Transfer of Business" source="x_wec_ibm_transfer">413f9fe20f7e220034457d4ce1050ec4</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="IBM Transfer of Business">413f9fe20f7e220034457d4ce1050ec4</sys_scope>
+            <sys_update_name>sys_ui_list_sys_ui_policy_action_sys_ui_policy_advanced</sys_update_name>
+            <sys_updated_by>peter.crivello@weather.com</sys_updated_by>
+            <sys_updated_on>2016-11-08 18:27:06</sys_updated_on>
+            <sys_user display_value="Peter Crivello">8a7f13ee0f4c0200f7cee388b1050e29</sys_user>
+            <view display_value="Advanced" name="advanced">7966be310a0a0b8c00bd504090503227</view>
+            <view_name/>
+        </sys_ui_list>
+    </sys_ui_list>
+</record_update>

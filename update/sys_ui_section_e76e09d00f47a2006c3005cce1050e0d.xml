@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_ui_section caption="IBM Status" section_id="e76e09d00f47a2006c3005cce1050e0d" sys_domain="global" table="x_wec_ibm_transfer_cust_data" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_ibm_flag</element>
+            <position>0</position>
+            <sys_created_by>peter.crivello@weather.com</sys_created_by>
+            <sys_created_on>2016-11-08 13:21:04</sys_created_on>
+            <sys_id>736e09d00f47a2006c3005cce1050e32</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="IBM Status" display_value="IBM Status" name="x_wec_ibm_transfer_cust_data" sys_domain="global" view="Default view">e76e09d00f47a2006c3005cce1050e0d</sys_ui_section>
+            <sys_updated_by>peter.crivello@weather.com</sys_updated_by>
+            <sys_updated_on>2016-11-08 13:21:04</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>1</position>
+            <sys_created_by>peter.crivello@weather.com</sys_created_by>
+            <sys_created_on>2016-11-08 13:21:04</sys_created_on>
+            <sys_id>f36e09d00f47a2006c3005cce1050e32</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="IBM Status" display_value="IBM Status" name="x_wec_ibm_transfer_cust_data" sys_domain="global" view="Default view">e76e09d00f47a2006c3005cce1050e0d</sys_ui_section>
+            <sys_updated_by>peter.crivello@weather.com</sys_updated_by>
+            <sys_updated_on>2016-11-08 13:21:04</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_file_name</element>
+            <position>2</position>
+            <sys_created_by>peter.crivello@weather.com</sys_created_by>
+            <sys_created_on>2016-11-08 13:21:04</sys_created_on>
+            <sys_id>776e09d00f47a2006c3005cce1050e32</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="IBM Status" display_value="IBM Status" name="x_wec_ibm_transfer_cust_data" sys_domain="global" view="Default view">e76e09d00f47a2006c3005cce1050e0d</sys_ui_section>
+            <sys_updated_by>peter.crivello@weather.com</sys_updated_by>
+            <sys_updated_on>2016-11-08 13:21:04</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.end_split</element>
+            <position>3</position>
+            <sys_created_by>peter.crivello@weather.com</sys_created_by>
+            <sys_created_on>2016-11-08 13:21:04</sys_created_on>
+            <sys_id>f76e09d00f47a2006c3005cce1050e32</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="IBM Status" display_value="IBM Status" name="x_wec_ibm_transfer_cust_data" sys_domain="global" view="Default view">e76e09d00f47a2006c3005cce1050e0d</sys_ui_section>
+            <sys_updated_by>peter.crivello@weather.com</sys_updated_by>
+            <sys_updated_on>2016-11-08 13:21:04</sys_updated_on>
+            <sys_user/>
+            <type>.end_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.begin_split</element>
+            <position>4</position>
+            <sys_created_by>peter.crivello@weather.com</sys_created_by>
+            <sys_created_on>2016-11-08 13:21:04</sys_created_on>
+            <sys_id>7b6e09d00f47a2006c3005cce1050e32</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="IBM Status" display_value="IBM Status" name="x_wec_ibm_transfer_cust_data" sys_domain="global" view="Default view">e76e09d00f47a2006c3005cce1050e0d</sys_ui_section>
+            <sys_updated_by>peter.crivello@weather.com</sys_updated_by>
+            <sys_updated_on>2016-11-08 13:21:04</sys_updated_on>
+            <sys_user/>
+            <type>.begin_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_comp_oprid</element>
+            <position>5</position>
+            <sys_created_by>peter.crivello@weather.com</sys_created_by>
+            <sys_created_on>2016-11-08 13:21:04</sys_created_on>
+            <sys_id>fb6e09d00f47a2006c3005cce1050e32</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="IBM Status" display_value="IBM Status" name="x_wec_ibm_transfer_cust_data" sys_domain="global" view="Default view">e76e09d00f47a2006c3005cce1050e0d</sys_ui_section>
+            <sys_updated_by>peter.crivello@weather.com</sys_updated_by>
+            <sys_updated_on>2016-11-08 13:21:04</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_apr_oprid</element>
+            <position>6</position>
+            <sys_created_by>peter.crivello@weather.com</sys_created_by>
+            <sys_created_on>2016-11-08 13:21:04</sys_created_on>
+            <sys_id>7f6e09d00f47a2006c3005cce1050e32</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="IBM Status" display_value="IBM Status" name="x_wec_ibm_transfer_cust_data" sys_domain="global" view="Default view">e76e09d00f47a2006c3005cce1050e0d</sys_ui_section>
+            <sys_updated_by>peter.crivello@weather.com</sys_updated_by>
+            <sys_updated_on>2016-11-08 13:21:04</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_sent_by</element>
+            <position>7</position>
+            <sys_created_by>peter.crivello@weather.com</sys_created_by>
+            <sys_created_on>2016-11-08 13:21:04</sys_created_on>
+            <sys_id>ff6e09d00f47a2006c3005cce1050e32</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="IBM Status" display_value="IBM Status" name="x_wec_ibm_transfer_cust_data" sys_domain="global" view="Default view">e76e09d00f47a2006c3005cce1050e0d</sys_ui_section>
+            <sys_updated_by>peter.crivello@weather.com</sys_updated_by>
+            <sys_updated_on>2016-11-08 13:21:04</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>8</position>
+            <sys_created_by>peter.crivello@weather.com</sys_created_by>
+            <sys_created_on>2016-11-08 13:21:04</sys_created_on>
+            <sys_id>736e09d00f47a2006c3005cce1050e33</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="IBM Status" display_value="IBM Status" name="x_wec_ibm_transfer_cust_data" sys_domain="global" view="Default view">e76e09d00f47a2006c3005cce1050e0d</sys_ui_section>
+            <sys_updated_by>peter.crivello@weather.com</sys_updated_by>
+            <sys_updated_on>2016-11-08 13:21:04</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_comp_dttm</element>
+            <position>9</position>
+            <sys_created_by>peter.crivello@weather.com</sys_created_by>
+            <sys_created_on>2016-11-08 13:21:04</sys_created_on>
+            <sys_id>f36e09d00f47a2006c3005cce1050e33</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="IBM Status" display_value="IBM Status" name="x_wec_ibm_transfer_cust_data" sys_domain="global" view="Default view">e76e09d00f47a2006c3005cce1050e0d</sys_ui_section>
+            <sys_updated_by>peter.crivello@weather.com</sys_updated_by>
+            <sys_updated_on>2016-11-08 13:21:04</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_apr_dttm</element>
+            <position>10</position>
+            <sys_created_by>peter.crivello@weather.com</sys_created_by>
+            <sys_created_on>2016-11-08 13:21:04</sys_created_on>
+            <sys_id>776e09d00f47a2006c3005cce1050e33</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="IBM Status" display_value="IBM Status" name="x_wec_ibm_transfer_cust_data" sys_domain="global" view="Default view">e76e09d00f47a2006c3005cce1050e0d</sys_ui_section>
+            <sys_updated_by>peter.crivello@weather.com</sys_updated_by>
+            <sys_updated_on>2016-11-08 13:21:04</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_sent_dttm</element>
+            <position>11</position>
+            <sys_created_by>peter.crivello@weather.com</sys_created_by>
+            <sys_created_on>2016-11-08 13:21:04</sys_created_on>
+            <sys_id>f76e09d00f47a2006c3005cce1050e33</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="IBM Status" display_value="IBM Status" name="x_wec_ibm_transfer_cust_data" sys_domain="global" view="Default view">e76e09d00f47a2006c3005cce1050e0d</sys_ui_section>
+            <sys_updated_by>peter.crivello@weather.com</sys_updated_by>
+            <sys_updated_on>2016-11-08 13:21:04</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption>IBM Status</caption>
+            <header>false</header>
+            <name>x_wec_ibm_transfer_cust_data</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>peter.crivello@weather.com</sys_created_by>
+            <sys_created_on>2016-11-08 13:21:02</sys_created_on>
+            <sys_customer_update>true</sys_customer_update>
+            <sys_domain>global</sys_domain>
+            <sys_id>e76e09d00f47a2006c3005cce1050e0d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>IBM Status</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="IBM Transfer of Business" source="x_wec_ibm_transfer">413f9fe20f7e220034457d4ce1050ec4</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="IBM Transfer of Business">413f9fe20f7e220034457d4ce1050ec4</sys_scope>
+            <sys_update_name>sys_ui_section_e76e09d00f47a2006c3005cce1050e0d</sys_update_name>
+            <sys_updated_by>peter.crivello@weather.com</sys_updated_by>
+            <sys_updated_on>2016-11-08 13:21:02</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

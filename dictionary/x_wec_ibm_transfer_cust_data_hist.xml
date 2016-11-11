@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Customer Data History" max_length="40" name="x_wec_ibm_transfer_cust_data_hist" type="collection">
+        <element label="Address Seq Num" max_length="40" name="u_address_seq_num" read_only="true" type="integer"/>
+        <element label="Approved By" max_length="32" name="u_apr_oprid" read_only="true" reference="sys_user" type="reference"/>
+        <element label="Bill To Primary" max_length="40" name="u_bt_prim" read_only="true" type="boolean"/>
+        <element label="Completed On" max_length="40" name="u_comp_dttm" read_only="true" type="glide_date_time"/>
+        <element label="Completed By" max_length="32" name="u_comp_oprid" read_only="true" reference="sys_user" type="reference"/>
+        <element choice="3" choice_field="u_cust_type" choice_table="x_wec_ibm_transfer_cust_data" label="Customer Type" max_length="40" name="u_cust_type" read_only="true" type="choice">
+            <choice/>
+        </element>
+        <element label="Comments" max_length="254" name="u_descr254" read_only="true" type="string"/>
+        <element label="Date Time Stamp" max_length="40" name="u_dttm_stamp" read_only="true" type="glide_date_time"/>
+        <element label="Effective Status" max_length="3" name="u_eff_status" read_only="true" type="string"/>
+        <element label="ESW Flag" max_length="40" name="u_esw_flag" read_only="true" type="boolean"/>
+        <element label="Fed Flag" max_length="40" name="u_fed_flag" read_only="true" type="boolean"/>
+        <element label="File Name" max_length="30" name="u_file_name" read_only="true" type="string"/>
+        <element label="IBM Address 1" max_length="35" name="u_ibm_addr1" read_only="true" type="string"/>
+        <element label="IBM Address 2" max_length="35" name="u_ibm_addr2" read_only="true" type="string"/>
+        <element label="IBM City" max_length="35" name="u_ibm_city" read_only="true" type="string"/>
+        <element label="IBM Country" max_length="3" name="u_ibm_country" read_only="true" type="string"/>
+        <element label="IBM Country 2 Char Code" max_length="2" name="u_ibm_country_2char" read_only="true" type="string"/>
+        <element label="IBM Customer ID" max_length="20" name="u_ibm_cust_id" read_only="true" type="string"/>
+        <element label="IBM Customer Name" max_length="70" name="u_ibm_cust_name" read_only="true" type="string"/>
+        <element choice="3" choice_field="u_ibm_flag" choice_table="x_wec_ibm_transfer_cust_data" label="IBM Flag" max_length="40" name="u_ibm_flag" read_only="true" type="choice">
+            <choice/>
+        </element>
+        <element label="IBM Postal" max_length="10" name="u_ibm_postal" read_only="true" type="string"/>
+        <element label="IBM State" max_length="10" name="u_ibm_state" read_only="true" type="string"/>
+        <element label="IBM State Description" max_length="20" name="u_ibm_state_descr" read_only="true" type="string"/>
+        <element label="IBM VAT Registration" max_length="20" name="u_ibm_vat_reg_id" read_only="true" type="string"/>
+        <element label="Migration Code" max_length="4" name="u_migration_code" read_only="true" type="string"/>
+        <element label="Partner Customer" max_length="20" name="u_partner_cust" read_only="true" type="string"/>
+        <element label="Priority" max_length="3" name="u_priority" read_only="true" type="string"/>
+        <element label="Role" max_length="5" name="u_role" read_only="true" type="string"/>
+        <element label="Sent By" max_length="32" name="u_sent_by" read_only="true" reference="sys_user" type="reference"/>
+        <element label="Sent On" max_length="40" name="u_sent_dttm" read_only="true" type="glide_date_time"/>
+        <element label="Ship To Primary" max_length="40" name="u_st_prim" read_only="true" type="boolean"/>
+        <element label="Approved On" max_length="40" name="w_apr_dttm" read_only="true" type="glide_date_time"/>
+        <element label="REC Type" max_length="10" name="w_rec_type" read_only="true" type="string"/>
+        <index name="index">
+            <element name="u_sent_by"/>
+        </index>
+        <index name="index2">
+            <element name="u_apr_oprid"/>
+        </index>
+        <index name="index3">
+            <element name="u_comp_oprid"/>
+        </index>
+    </element>
+</database>

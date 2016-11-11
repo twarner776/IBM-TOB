@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_app_application">
+    <sys_app_application action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <category display_value="Custom Applications">e0355b31ef303000a61d5a3615c0fb78</category>
+        <description/>
+        <device_type>browser</device_type>
+        <hint/>
+        <name>O2C Customer Data Scrub</name>
+        <order>100</order>
+        <roles>x_wec_ibm_transfer_customer_data_user,x_wec_ibm_transfer.O2C Data Approver,x_wec_ibm_transfer.O2C Data Entry</roles>
+        <sys_class_name>sys_app_application</sys_class_name>
+        <sys_created_by>peter.crivello@weather.com</sys_created_by>
+        <sys_created_on>2016-11-03 13:26:05</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_id>98af1be20f7e220034457d4ce1050e74</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>IBM Transfer of Business</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="IBM Transfer of Business" source="x_wec_ibm_transfer">413f9fe20f7e220034457d4ce1050ec4</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="IBM Transfer of Business">413f9fe20f7e220034457d4ce1050ec4</sys_scope>
+        <sys_update_name>sys_app_application_98af1be20f7e220034457d4ce1050e74</sys_update_name>
+        <sys_updated_by>peter.crivello@weather.com</sys_updated_by>
+        <sys_updated_on>2016-11-08 21:48:25</sys_updated_on>
+        <title>IBM Transfer of Business</title>
+        <view_name/>
+    </sys_app_application>
+</record_update>

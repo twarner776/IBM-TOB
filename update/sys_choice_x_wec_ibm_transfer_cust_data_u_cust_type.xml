@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="u_cust_type" table="x_wec_ibm_transfer_cust_data" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_cust_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>B2B</label>
+            <language>en</language>
+            <name>x_wec_ibm_transfer_cust_data</name>
+            <sequence>1</sequence>
+            <sys_created_by>peter.crivello@weather.com</sys_created_by>
+            <sys_created_on>2016-11-07 13:57:48</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>b53dccc40f8b62006c3005cce1050e33</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>peter.crivello@weather.com</sys_updated_by>
+            <sys_updated_on>2016-11-07 13:57:48</sys_updated_on>
+            <value>B2B</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_cust_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>B2C</label>
+            <language>en</language>
+            <name>x_wec_ibm_transfer_cust_data</name>
+            <sequence>2</sequence>
+            <sys_created_by>peter.crivello@weather.com</sys_created_by>
+            <sys_created_on>2016-11-07 13:57:58</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>654dccc40f8b62006c3005cce1050ea0</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>peter.crivello@weather.com</sys_updated_by>
+            <sys_updated_on>2016-11-07 13:58:08</sys_updated_on>
+            <value>B2C</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>u_cust_type</element>
+            <name>x_wec_ibm_transfer_cust_data</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>peter.crivello@weather.com</sys_created_by>
+            <sys_created_on>2016-11-07 13:57:48</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>dc4d88c40f8b62006c3005cce1050e2b</sys_id>
+            <sys_mod_count>3</sys_mod_count>
+            <sys_name>u_cust_type</sys_name>
+            <sys_package display_value="IBM Transfer of Business" source="x_wec_ibm_transfer">413f9fe20f7e220034457d4ce1050ec4</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="IBM Transfer of Business">413f9fe20f7e220034457d4ce1050ec4</sys_scope>
+            <sys_update_name>sys_choice_x_wec_ibm_transfer_cust_data_u_cust_type</sys_update_name>
+            <sys_updated_by>peter.crivello@weather.com</sys_updated_by>
+            <sys_updated_on>2016-11-07 13:58:08</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+</record_update>

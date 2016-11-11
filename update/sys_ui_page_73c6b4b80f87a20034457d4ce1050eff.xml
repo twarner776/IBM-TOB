@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ui_page">
+    <sys_ui_page action="INSERT_OR_UPDATE">
+        <category>general</category>
+        <client_script><![CDATA[function fnExcelReport() {
+	var fedFlag;
+	var eswFlag;
+	var effStatus;
+	var fileName;
+	var row = 0;
+	//var gdt = setFileDate();
+	//alert('gdt: ' + gdt);
+
+	var tab_text="<table><tr>";
+	
+	//add the columns headers
+	tab_text=tab_text+"<th>"+"MIGRTN_CODE"+"</th>";
+	tab_text=tab_text+"<th>"+"CUST#"+"</th>";
+	tab_text=tab_text+"<th>"+"NAME"+"</th>";
+	tab_text=tab_text+"<th>"+"ADR_1"+"</th>";
+	tab_text=tab_text+"<th>"+"ADR_2"+"</th>";
+	tab_text=tab_text+"<th>"+"CITY"+"</th>";
+	tab_text=tab_text+"<th>"+"STATE_NAME"+"</th>";
+	tab_text=tab_text+"<th>"+"STATE_CODE"+"</th>";
+	tab_text=tab_text+"<th>"+"POSTALCODE"+"</th>";
+	tab_text=tab_text+"<th>"+"CNTRY_CODE_2"+"</th>";
+	tab_text=tab_text+"<th>"+"CNTRY_CODE"+"</th>";
+	tab_text=tab_text+"<th>"+"FED_FLAG"+"</th>";
+	tab_text=tab_text+"<th>"+"ESW_FLAG"+"</th>";
+	tab_text=tab_text+"<th>"+"FILE_NAME"+"</th>";
+	tab_text=tab_text+"<th>"+"VAT_NO/TAX_ID"+"</th>";
+	tab_text=tab_text+"<th>"+"PARTNER_CUST"+"</th>";
+	tab_text=tab_text+"<th>"+"REC_TYPE"+"</th>";
+	tab_text=tab_text+"<th>"+"ACTIVE_FLAG"+"</th>";
+	tab_text=tab_text+"<th>"+"ENTITLEMENT/ROLE"+"</th>";
+	tab_text=tab_text+"<th>"+"Priority"+"</th>";
+	tab_text=tab_text+"</tr>";
+	
+	//Populate the rows of data that are in the status of Completed
+	var ibmCust = new GlideRecord('x_wec_ibm_transfer_cust_data');
+	ibmCust.addQuery('u_ibm_flag', 'Completed');
+	ibmCust.query();
+	while(ibmCust.next()){
+		if (row == 0) {
+			 //create the file name
+			//fileName = ibmCust.u_migration_code + "_" + ibmCust.u_cust_type + "_FILE_" + fileDate + ".xlsx";
+			fileName = ibmCust.u_migration_code + "_" + ibmCust.u_cust_type + "_FILE.xlsx";
+			//alert('fileName: ' + fileName);
+		}
+		if (ibmCust.u_fed_flag == true){
+			fedFlag = 'Y';
+		} else {
+			fedFlag = 'N';
+		}
+		
+		if (ibmCust.u_esw_flag == true){
+			eswFlag = 'Y';
+		} else {
+			eswFlag = 'N';
+		}
+		
+		if (ibmCust.u_eff_status == true){
+			effStatus = 'Y';
+		} else {
+			effStatus = 'N';
+		}
+		
+		//alert('ibmCust.u_ibm_cust_id: ' + ibmCust.u_ibm_cust_id);
+		tab_text=tab_text+"<tr><td>"+ibmCust.u_migration_code+"</td>";
+		tab_text=tab_text+"<td>"+ibmCust.u_ibm_cust_id+"</td>";
+		tab_text=tab_text+"<td>"+ibmCust.u_ibm_cust_name+"</td>";
+		tab_text=tab_text+"<td>"+ibmCust.u_ibm_addr1+"</td>";
+		tab_text=tab_text+"<td>"+ibmCust.u_ibm_addr2+"</td>";
+		tab_text=tab_text+"<td>"+ibmCust.u_ibm_city+"</td>";
+		tab_text=tab_text+"<td>"+ibmCust.u_ibm_state_descr+"</td>";
+		tab_text=tab_text+"<td>"+ibmCust.u_ibm_state+"</td>";
+		tab_text=tab_text+"<td>"+ibmCust.u_ibm_postal+"</td>";
+		tab_text=tab_text+"<td>"+ibmCust.u_ibm_country_2char+"</td>";
+		tab_text=tab_text+"<td>"+ibmCust.u_ibm_country+"</td>";
+		tab_text=tab_text+"<td>"+fedFlag+"</td>";
+		tab_text=tab_text+"<td>"+eswFlag+"</td>";
+		tab_text=tab_text+"<td>"+fileName+"</td>";
+		tab_text=tab_text+"<td>"+ibmCust.u_ibm_vat_reg_id+"</td>";
+		tab_text=tab_text+"<td>"+ibmCust.u_partner_cust+"</td>";
+		tab_text=tab_text+"<td>"+ibmCust.u_rec_type+"</td>";
+		tab_text=tab_text+"<td>"+effStatus+"</td>";
+		tab_text=tab_text+"<td>"+ibmCust.u_role+"</td>";
+		tab_text=tab_text+"<td>"+ibmCust.u_priority+"</td>";
+		tab_text=tab_text+"</tr>";
+		
+		row++;
+	}
+	
+	tab_text=tab_text+"</table>";
+	tab_text= tab_text.replace(/<A[^>]*>|<\/A>/g, "");//remove if u want links in your table
+	tab_text= tab_text.replace(/<img[^>]*>/gi,""); // remove if u want images in your table
+	tab_text= tab_text.replace(/<input[^>]*>|<\/input>/gi, ""); // reomves input params
+	
+	var ua = window.navigator.userAgent;
+	var msie = ua.indexOf("MSIE ");
+	
+	
+	if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./))      // If Internet Explorer
+		{
+		txtArea1.document.open("txt/html","replace");
+		txtArea1.document.write(tab_text);
+		txtArea1.document.close();
+		txtArea1.focus();
+		
+		sa=txtArea1.document.execCommand("SaveAs",true, "download.xls");
+	}
+	else                 //other browser not tested on IE 11
+		sa = window.open('data:application/vnd.ms-excel,' + encodeURIComponent(tab_text));
+	return (sa);
+}]]></client_script>
+        <description/>
+        <direct>false</direct>
+        <endpoint>x_wec_ibm_transfer_ibm_customer_file_extract.do</endpoint>
+        <html><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+<button id="createFile" type="button" onClick="fnExcelReport()">${gs.getMessage("Create IBM File")}</button>
+</j:jelly>]]></html>
+        <name>ibm_customer_file_extract</name>
+        <processing_script><![CDATA[var todayIs = new GlideDate();
+var fileDd = todayIs.getDate();
+alert('fileDd: ' + fileDd);
+var fileMm = todayIs.getMonth()+1;//January is 0!
+//alert('fileMm: ' + fileMm);
+var fileYyyy = todayIs.getYear();
+//alert('fileYyyy: ' + fileYyyy);
+var fileYy = fileYyyy.toString().substr(2, 2);
+//alert('fileYy: ' + fileYy);
+var fileDate = pad('00',fileMm.toString(),true) +  pad('00',fileDd.toString(),true) + fileYy.toString();
+//alert('fileDate: ' + fileDate);
+]]></processing_script>
+        <sys_class_name>sys_ui_page</sys_class_name>
+        <sys_created_by>peter.crivello@weather.com</sys_created_by>
+        <sys_created_on>2016-11-10 01:26:07</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>73c6b4b80f87a20034457d4ce1050eff</sys_id>
+        <sys_mod_count>40</sys_mod_count>
+        <sys_name>ibm_customer_file_extract</sys_name>
+        <sys_package display_value="IBM Transfer of Business" source="x_wec_ibm_transfer">413f9fe20f7e220034457d4ce1050ec4</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="IBM Transfer of Business">413f9fe20f7e220034457d4ce1050ec4</sys_scope>
+        <sys_update_name>sys_ui_page_73c6b4b80f87a20034457d4ce1050eff</sys_update_name>
+        <sys_updated_by>peter.crivello@weather.com</sys_updated_by>
+        <sys_updated_on>2016-11-10 17:55:41</sys_updated_on>
+    </sys_ui_page>
+</record_update>
